@@ -1,9 +1,7 @@
 from seleniumwire import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import json
-import time
 
 # Set up Chrome options
 chrome_binary_path = "/usr/bin/chromium-browser"
@@ -37,6 +35,7 @@ function recordEvent(event) {
         x: event.clientX || null,
         y: event.clientY || null
     };
+    console.log(recordedEvent);
     window.recordedEvents.push(recordedEvent);
 }
 
